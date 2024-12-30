@@ -75,7 +75,7 @@ const SecParticipants = () => {
           <img
             src="/images/SecParticipants/IMG.png"
             alt="img"
-            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:right-60 2xl:right-0"
+            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:-right-60 2xl:right-0"
           />
           <div className="w-fit absolute top-0 xl:-top-14 2xl:-top-16 right-7 sm:right-36 lg:right-72 xl:right-10 2xl:right-60">
             <ImgText images={data} />
