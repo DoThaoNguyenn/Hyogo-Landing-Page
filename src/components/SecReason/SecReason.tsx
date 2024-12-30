@@ -60,10 +60,10 @@ const SecReason = () => {
   return (
     <div
       id="benefits-of-participation"
-      className="relative bg-repeat pt-[13rem] md:pt-[23rem] lg:pb-[14rem]"
+      className="relative bg-repeat pt-[13rem] xl:pt-[23rem] lg:pb-[14rem]"
       style={{ backgroundImage: "url('/images/header/bg-footer.jpeg')" }}
     >
-      <div className="text-center text-[#029fc8]/10 text-[48px] md:text-[100px] lg:text-[150px] font-normal font-geomanist leading-none tracking-tighter">
+      <div className="text-center text-[#029fc8]/10 text-[48px] md:text-[100px] xl:text-[150px] font-normal font-geomanist leading-none tracking-tighter">
         HYOGO JOB FAIR PRE-EVENT
       </div>
       <div className="container mx-auto relative -mt-[100px]">

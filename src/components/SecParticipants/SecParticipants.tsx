@@ -32,7 +32,7 @@ const SecParticipants = () => {
           <div className="relative bg-[#029fc8] w-full max-w-[1701px] xl:h-[450px] pt-[3.25rem] xl:pt-5 pb-32 xl:pb-7 px-4 xl:px-32 flex flex-row items-start">
             {/* vertical text */}
             <div className="hidden xl:flex h-full flex-col">
-              <p className="-rotate-90 translate-y-80 text-left text-[38px] font-extrabold text-stroke-a uppercase whitespace-nowrap w-32">
+              <p className="-rotate-90 translate-y-80 text-left text-[38px] font-extrabold text-stroke-a uppercase whitespace-nowrap w-32 font-georgia">
                 đối tượng tham gia
               </p>
               <div className="bg-[#0b6386]/50 h-[60%] translate-y-[55%]"></div>
@@ -69,13 +69,13 @@ const SecParticipants = () => {
           <img
             src="/images/SecParticipants/IMG-sm.png"
             alt="img-sml"
-            className="absolute xl:hidden -top-20 right-0 sm:w-[600px] sm:h-[950px] lg:w-[850px]"
+            className="absolute xl:hidden -top-20 right-0 sm:w-[600px] sm:h-[950px] lg:w-[850px] overflow-x-visible"
           />
           {/* Image for breakpoint >= 1280px */}
           <img
             src="/images/SecParticipants/IMG.png"
             alt="img"
-            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:-right-60 2xl:right-0"
+            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:right-60 2xl:right-0"
           />
           <div className="w-fit absolute top-0 xl:-top-14 2xl:-top-16 right-7 sm:right-36 lg:right-72 xl:right-10 2xl:right-60">
             <ImgText images={data} />

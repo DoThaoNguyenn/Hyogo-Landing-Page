@@ -187,7 +187,7 @@ const Menu = () => {
                         </div>
                       </div>
                     }
-                    onClick={() => router.push("/application-form")}
+                    onClick={() => router.push("/coming-soon")}
                   />
                 </div>
               </>

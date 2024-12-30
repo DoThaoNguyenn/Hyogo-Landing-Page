@@ -40,18 +40,18 @@ export default function SecInformation() {
       <div className="flex flex-col lg:flex-row justify-between items-start">
         <div className="flex flex-col lg:flex-row">
           <div className=" lg:hidden w-full flex justify-center">
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center ml-4">
               <img
                 src="/images/SecInformation/info1.png"
                 alt="img"
                 style={{ width: "80%" }}
-                className="pt-[15px] mr-3"
+                className="pt-[15px]"
               />
               <img
                 src="/images/SecInformation/info2.png"
                 alt="img"
                 style={{ width: "40%" }}
-                className="absolute bottom-[-10%] left-0"
+                className="absolute bottom-[-10%] left-0 "
               />
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function SecInformation() {
             />
             <div>
               <div className="flex flex-row items-center justify-center">
-                <p className="text-blue-secondary text-[64px] lg:text-[120px] font-medium font-just pl-[7px] ">
+                <p className="text-blue-secondary text-[64px] xl:text-[90px] 2xl:text-[120px] font-medium font-just pl-[7px] ">
                   Hyogo Prefecture
                 </p>
                 <img
@@ -99,24 +99,24 @@ export default function SecInformation() {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row w-[90%] lg:w-[75%] mx-auto items-center justify-center">
+      <div className="flex flex-col xl:flex-row w-[90%] xl:w-[75%] mx-auto items-center justify-center">
         <img
           src="/images/SecInformation/Hyogo_Map.png"
           alt="img"
-          style={{ width: "80%", height: "80%" }}
-          className="pb-[39px] block lg:hidden"
+          // style={{ width: "80%", height: "80%" }}
+          className="pb-[39px] block xl:hidden"
         />
 
         <div className="flex flex-col gap-[7px] lg:gap-[18px]">
-          <div className="flex flex-col xl:block">
-            <span className="text-blue-secondary text-[54px] lg:text-[80px] font-normal font-just ">
+          <div className="flex flex-col sm:block">
+            <span className="text-blue-secondary text-[54px] xl:text-[80px] font-normal font-just ">
               Hyogo Job Fair{" "}
             </span>
-            <span className="text-black-text text-[54px] lg:text-[80px] font-normal font-just ">
+            <span className="text-black-text text-[54px] xl:text-[80px] font-normal font-just ">
               Pre - Event là gì?
             </span>
           </div>
-          <div className="w-full lg:w-[80%]">
+          <div className="w-full xl:w-[80%]">
             <p className="text-black-text text-lg font-medium leading-[38px]">
               Ngày hội việc làm tỉnh Hyogo - Nhật Bản là sự kiện đặc biệt do
               Chính quyền tỉnh Hyogo tổ chức. Sự kiện nhằm kết nối sinh viên
@@ -159,11 +159,11 @@ export default function SecInformation() {
           src="/images/SecInformation/Hyogo_Map.png"
           alt="img"
           style={{ width: "90%", height: "90%" }}
-          className="pb-[39px] hidden lg:block"
+          className="pb-[39px] hidden xl:block"
         />
       </div>
 
-      <div className="w-[90%] lg:w-[75%] grid grid-cols-2 lg:grid-cols-5 gap-x-[62px] mx-auto">
+      <div className="w-[90%] lg:w-[75%] grid grid-cols-2 lg:grid-cols-5 gap-x-8 2xl:gap-x-[62px] mx-auto">
         {boxInfos.map((info, index) => (
           <BoxInfo
             key={index}
