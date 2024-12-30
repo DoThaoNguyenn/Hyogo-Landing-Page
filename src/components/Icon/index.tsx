@@ -61,7 +61,7 @@ export const IconGroup = (props: SVGProps<SVGSVGElement>) => (
 export const IconArrow = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="40"
-    height="42"
+    height="40"
     viewBox="0 0 40 42"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"

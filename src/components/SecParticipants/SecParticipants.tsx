@@ -46,7 +46,7 @@ const SecParticipants = () => {
                 Sinh viên sẽ giao lưu trực tuyến với 11 doanh nghiệp đến từ tỉnh
                 Hyogo.
                 <br />
-                Các công ty sẽ được chia thành 3 phòng theo khối ngành, mỗi
+                Các công ty sẽ được chia thành 2 phòng theo khối ngành, mỗi
                 phiên thảo luận của doanh nghiệp sẽ có 30 phút để trình bày và
                 trao đổi với sinh viên Việt Nam.
               </p>

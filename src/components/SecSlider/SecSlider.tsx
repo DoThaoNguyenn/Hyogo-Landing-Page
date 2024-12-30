@@ -56,7 +56,7 @@ const SecSlider = () => {
       className="flex flex-col gap-6 md:gap-8 py-6 md:py-8 lg:py-10"
     >
       <div className="hidden md:block w-full">
-        <Marquee className="w-full" pauseOnHover>
+        <Marquee className="w-full [--duration:80s]" pauseOnHover>
           {[...slider1, ...slider1Mobile].map((item, index) => (
             <div
               key={index}
@@ -73,7 +73,7 @@ const SecSlider = () => {
       </div>
 
       <div className="md:hidden w-full">
-        <Marquee className="w-full" pauseOnHover>
+        <Marquee className="w-full [--duration:80s]" pauseOnHover>
           {slider1.map((item, index) => (
             <div
               key={index}
@@ -90,7 +90,7 @@ const SecSlider = () => {
       </div>
 
       <div className="md:hidden w-full">
-        <Marquee className="w-full" pauseOnHover reverse>
+        <Marquee className="w-full [--duration:80s]" pauseOnHover reverse>
           {slider1Mobile.map((item, index) => (
             <div
               key={index}
@@ -116,7 +116,7 @@ const SecSlider = () => {
           </p>
         </div>
         <div className="max-w-full md:max-w-[42.875rem] px-4 md:px-0">
-          <p className="text-center md:text-left text-black-text text-base md:text-lg md:text-[20px] text-[16px] font-normal">
+          <p className="text-center md:text-left text-black-text text-base md:text-lg lg:text-xl font-normal">
             Tỉnh Hyogo đi đầu trong đổi mới, tích cực nuôi dưỡng các ngành công
             nghiệp công nghệ cao và các sản phẩm tiên phong. Tỉnh Hyogo là nơi
             có cơ sở bức xạ synchrotron hiệu suất cao nhất thế giới, "SPring-8",
@@ -138,7 +138,7 @@ const SecSlider = () => {
       </div>
 
       <div className="hidden md:block w-full">
-        <Marquee className="w-full" reverse pauseOnHover>
+        <Marquee className="w-full [--duration:80s]" reverse pauseOnHover>
           {[...slider2, ...slider2Mobile].map((item, index) => (
             <div
               key={index}
@@ -155,7 +155,7 @@ const SecSlider = () => {
       </div>
 
       <div className="md:hidden w-full">
-        <Marquee className="w-full" pauseOnHover>
+        <Marquee className="w-full [--duration:80s]" pauseOnHover>
           {slider2.map((item, index) => (
             <div
               key={index}
@@ -172,7 +172,7 @@ const SecSlider = () => {
       </div>
 
       <div className="md:hidden w-full">
-        <Marquee className="w-full" reverse pauseOnHover>
+        <Marquee className="w-full [--duration:80s]" reverse pauseOnHover>
           {slider2Mobile.map((item, index) => (
             <div
               key={index}

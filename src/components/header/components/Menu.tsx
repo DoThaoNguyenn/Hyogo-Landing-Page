@@ -69,7 +69,24 @@ const Menu = () => {
   const isScrolled = useScroll(50);
   const [isActiveHamburger, setIsActiveHamburger] = useState<boolean>(false);
   const { width: windowWidth } = useWindowSize();
-  const { pathname, navigate } = Navigate();
+
+  const [currentHash, setCurrentHash] = useState<string>("");
+
+  const { navigate } = Navigate();
+
+  useEffect(() => {
+    setCurrentHash(window.location.hash);
+
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (isActiveHamburger) {
@@ -84,7 +101,14 @@ const Menu = () => {
   };
 
   const isMobileView = windowWidth < 1280;
-  console.log("isActiveHamburger", isActiveHamburger);
+
+  const handleCloseMenu = () => {
+    setIsActiveHamburger(false);
+  };
+
+  const handleLogoClick = () => {
+    router.push("/");
+  };
 
   return (
     <>
@@ -102,7 +126,8 @@ const Menu = () => {
             <img
               src="/images/header/hyogo-logo.png"
               alt="logo"
-              className="w-1/2 sm:w-1/4 max-w-[180px] lg:max-w-[220px] xl:w-auto"
+              className="w-1/2 sm:w-1/4 max-w-[180px] lg:max-w-[220px] xl:w-auto cursor-pointer"
+              onClick={handleLogoClick}
             />
             <div
               className={`hamburger hamburger--squeeze block xl:hidden ${
@@ -121,23 +146,28 @@ const Menu = () => {
                   {navigate.map((item, index) => (
                     <li
                       key={index}
-                      className="flex flex-col justify-center content-center w-[6.5rem] "
+                      className={`flex flex-col justify-center items-center w-[6.5rem] nav-item ${
+                        currentHash === item.path ? "active" : ""
+                      }`}
                     >
                       <Link
-                        className={`flex items-center text-center text-base hover:text-blue-secondary ${
-                          pathname === item.path
-                            ? "text-blue-secondary font-extrabold"
+                        className={`flex items-center text-center text-base hover:text-blue-secondary relative ${
+                          currentHash === item.path
+                            ? "text-blue-secondary font-extrabold menu-active"
                             : "text-black-text font-semibold"
                         }`}
                         href={item.path}
+                        onClick={() => {
+                          setCurrentHash(item.path);
+                        }}
                       >
                         <span
                           dangerouslySetInnerHTML={{ __html: item.titlePc }}
                         />
                       </Link>
-                      {pathname === item.path && (
+                      {/* {pathname === item.path && (
                         <div className="w-[65px] h-[3px] bg-[#029fc8] mx-auto mt-1"></div>
-                      )}
+                      )} */}
                     </li>
                   ))}
                 </ul>
@@ -157,7 +187,7 @@ const Menu = () => {
                         </div>
                       </div>
                     }
-                    onClick={() => router.push("/coming-soon")}
+                    onClick={() => router.push("/application-form")}
                   />
                 </div>
               </>
@@ -174,32 +204,52 @@ const Menu = () => {
           <div className="flex flex-col items-center px-4 py-8 mt-2 md:px-14">
             <div className="flex flex-col items-center w-full space-y-6">
               {navigate.map((item, index) => (
-                <button
+                <Link
+                  href={item.path}
                   key={index}
-                  className={`item-link w-full flex items-center gap-4 py-2 px-7  hover:bg-blue-secondary hover:text-white ${
-                    pathname === item.path || index === 0
+                  className={`item-link w-full flex items-center gap-4 py-1.5 px-7  min-h-[60px] hover:bg-blue-secondary hover:text-white ${
+                    currentHash === item.path
                       ? "bg-blue-secondary text-white"
                       : "bg-blue-light text-blue-secondary"
                   } text-xl font-medium rounded-[5px] border-2 border-blue-secondary`}
-                  style={{
-                    color:
-                      pathname === item.path || index === 0
-                        ? "white"
-                        : "text-blue-secondary",
+                  onClick={() => {
+                    handleCloseMenu();
+                    setCurrentHash(item.path);
                   }}
                 >
                   {item.icon}
                   {item.titleMb}
-                </button>
+                </Link>
               ))}
             </div>
 
             {/* Biểu tượng mạng xã hội */}
-            <img
-              src="/images/icons/icon-social-media.svg"
-              alt="logo"
-              className="mt-9"
-            />
+            <div className="flex flex-row gap-3 mt-9">
+              <img
+                className="cursor-pointer"
+                src="/images/icons/fb.png"
+                alt="logo"
+                onClick={() =>
+                  router.push("https://www.facebook.com/PasonaHRVietnam")
+                }
+              />
+              <img
+                className="cursor-pointer"
+                src="/images/icons/in.png"
+                alt="logo"
+                onClick={() =>
+                  router.push(
+                    "https://www.linkedin.com/company/pasonahr-vietnam/"
+                  )
+                }
+              />
+              <img
+                className="cursor-pointer"
+                src="/images/icons/web.png"
+                alt="logo"
+                onClick={() => router.push("https://www.google.com/")}
+              />
+            </div>
           </div>
         </div>
       </nav>

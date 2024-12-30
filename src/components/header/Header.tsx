@@ -11,10 +11,10 @@ export default function Header() {
 
   return (
     <header className="relative w-full  overflow-hidden bg-[url('/images/header/bg-mb.jpg')] lg:bg-[url('/images/header/bg-header.jpg')] bg-cover bg-no-repeat bg-center">
-      <div className="sticky top-0 left-0 w-full z-50 h-[90px] xl:h-auto">
+      <div className="fixed top-0 left-0 w-full z-50 h-[90px] xl:h-auto">
         <Menu />
       </div>
-      <div className="custeem-end relative h-full xl:max-w-[1490px] mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-end px-4 sm:px-8 md:px-12 lg:px-15 xl:pt-0">
+      <div className="custeem-end relative h-full xl:max-w-[1490px] mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-end px-4 sm:px-8 md:px-12 lg:px-15 pt-[90px]">
         <div className="flex flex-col w-full lg:w-1/2 gap-1 lg:pb-10">
           {/* block title */}
           <div className="order-1 flex flex-col min-w-[400px]:gap-2 gap-2 lg:gap-0">

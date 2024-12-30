@@ -5,9 +5,16 @@ type ReasonItemProps = {
   title: string;
   description: string;
   isLeft?: boolean;
+  color?: string;
 };
 
-const ReasonItem = ({ icon, title, description, isLeft }: ReasonItemProps) => {
+const ReasonItem = ({
+  icon,
+  title,
+  description,
+  isLeft,
+  color,
+}: ReasonItemProps) => {
   return (
     <>
       {/* Desktop View */}
@@ -16,7 +23,9 @@ const ReasonItem = ({ icon, title, description, isLeft }: ReasonItemProps) => {
           <div className="flex flex-row justify-start items-start gap-[1.625rem]">
             <img src={icon} alt="icon" className="mt-1 w-[50px]" />
             <div className="flex flex-col gap-4">
-              <p className="text-left text-blue-secondary text-[22px] font-bold line-clamp-2">
+              <p
+                className={`text-left text-${color} text-[22px] font-bold line-clamp-2`}
+              >
                 {title}
               </p>
               <p className="text-left text-black-text text-lg font-normal line-clamp-3">
@@ -27,7 +36,9 @@ const ReasonItem = ({ icon, title, description, isLeft }: ReasonItemProps) => {
         ) : (
           <div className="flex flex-row justify-end items-start gap-[1.625rem]">
             <div className="flex flex-col gap-4">
-              <p className="text-right text-blue-secondary text-[22px] font-bold line-clamp-2">
+              <p
+                className={`text-right text-${color} text-[22px] font-bold line-clamp-2`}
+              >
                 {title}
               </p>
               <p className="text-right text-black-text text-lg font-normal line-clamp-3">
@@ -44,7 +55,9 @@ const ReasonItem = ({ icon, title, description, isLeft }: ReasonItemProps) => {
         <div className="flex flex-row justify-start items-start gap-[1.625rem] w-full">
           <img src={icon} alt="icon" className="mt-1 w-[50px]" />
           <div className="flex flex-col gap-4 flex-1">
-            <p className="text-left text-blue-secondary text-[22px] font-bold line-clamp-2">
+            <p
+              className={`text-left text-${color} text-[22px] font-bold line-clamp-2`}
+            >
               {title}
             </p>
             <p className="text-left text-black-text text-lg font-normal line-clamp-3">

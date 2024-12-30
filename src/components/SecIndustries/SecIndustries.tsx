@@ -27,7 +27,7 @@ const industriesData: Industry[] = [
     img: "/images/companies/nhansu.png",
     companies: [
       {
-        video: "https://youtube.com/embed/_hcbMACrDs8",
+        video: "https://youtube.com/embed/qjwrp9MGka0",
         logo: "/images/companies/pasona.png",
         name: "Pasona Inc.",
         linhvuc: "Nhân sự",
@@ -45,7 +45,7 @@ const industriesData: Industry[] = [
     img: "/images/companies/cntt.png",
     companies: [
       {
-        video: "https://youtube.com/embed/_hcbMACrDs8",
+        video: "https://youtube.com/embed/H3IMr3jT0i0",
         logo: "/images/companies/fuji-data.png",
         name: "Fuji Data System Inc.",
         linhvuc: "Công nghệ thông tin",
@@ -55,7 +55,7 @@ const industriesData: Industry[] = [
           "Vị trí mong muốn tuyển dụng: Phát triển công nghệ, xử lý thông tin",
       },
       {
-        video: "https://youtube.com/embed/_hcbMACrDs8",
+        video: "https://youtube.com/embed/iG-IUrlR6WY",
         logo: "/images/companies/petabit.png",
         name: "Petabit Corporation",
         linhvuc: "Công nghệ thông tin",
@@ -82,7 +82,7 @@ const industriesData: Industry[] = [
           "Vị trí tuyển dụng: Phát triển công nghệ, quản lý, xây dựng: bảo trì máy móc",
       },
       {
-        video: "https://youtube.com/embed/_hcbMACrDs8",
+        video: "https://youtube.com/embed/w7fFbIelf38",
         logo: "/images/companies/cbs.png",
         name: "CBS Group",
         linhvuc: "Xây dựng và thiết kế cơ khí",
@@ -168,7 +168,7 @@ const SecIndustries = () => {
   return (
     <div
       id="list-of-companies"
-      className="flex flex-col justify-center items-center w-full px-4 lg:pl-[15.375rem] lg:pr-[16rem] pt-10 pb-[4.875rem]"
+      className="flex flex-col justify-center items-center w-full container mx-auto pt-10 pb-[4.875rem]"
     >
       <SecTitle title="đồng tổ chức" />
       <div className="flex flex-row justify-center items-center mt-[3rem] gap-[22px] lg:gap-10 pb-[6rem] w-full">

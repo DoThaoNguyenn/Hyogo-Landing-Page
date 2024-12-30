@@ -108,11 +108,11 @@ export default function SecInformation() {
         />
 
         <div className="flex flex-col gap-[7px] lg:gap-[18px]">
-          <div className="flex flex-col xl:flex-row">
-            <span className="text-blue-secondary text-[54px] lg:text-[80px] font-normal font-just">
+          <div className="flex flex-col xl:block">
+            <span className="text-blue-secondary text-[54px] lg:text-[80px] font-normal font-just ">
               Hyogo Job Fair{" "}
             </span>
-            <span className="text-black-text text-[54px] lg:text-[80px] font-normal font-just pl-[81px] lg:pl-0">
+            <span className="text-black-text text-[54px] lg:text-[80px] font-normal font-just ">
               Pre - Event là gì?
             </span>
           </div>

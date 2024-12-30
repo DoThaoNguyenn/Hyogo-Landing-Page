@@ -33,7 +33,7 @@ const SecQuestion = () => {
   return (
     <div
       id="frequently-asked-questions"
-      className="py-8 md:py-12 lg:py-14 px-4 md:px-8 lg:px-16"
+      className="py-8 md:py-12 lg:py-14 container mx-auto"
     >
       <SecTitle title="Câu hỏi thường gặp" />
       <div className="mt-6 md:mt-9 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">

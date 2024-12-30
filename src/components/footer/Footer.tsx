@@ -2,35 +2,42 @@
 import React from "react";
 import FooterCol from "./components/FooterCol";
 import { useRouter } from "next/navigation";
-type FooterColProps = {
-  title: string;
-  text1: string;
-  text2: string;
-  text3: string;
-  text4: string;
-  text5: string;
-  text6: string;
+
+type FooterLink = {
+  text: string;
+  url?: string;
 };
+
+type FooterSection = {
+  title: string;
+  links: FooterLink[];
+};
+
 const Footer = () => {
   const router = useRouter();
-  const FooterContent = [
+  const FooterContent: FooterSection[] = [
     {
       title: "MENU",
-      text1: "Giới thiệu chương trình",
-      text2: "Đôi tượng tham gia",
-      text3: "Lợi ích tham gia",
-      text4: "Danh sách công ty",
-      text5: "Cuộc sống tại Hyogo",
-      text6: "Câu hỏi thường gặp",
+      links: [
+        { text: "Giới thiệu chương trình", url: "#program-introduction" },
+        { text: "Đôi tượng tham gia", url: "#target-participants" },
+        { text: "Lợi ích tham gia", url: "#benefits-of-participation" },
+        { text: "Danh sách công ty", url: "#list-of-companies" },
+        { text: "Cuộc sống tại Hyogo", url: "#life-in-hyogo" },
+        { text: "Câu hỏi thường gặp", url: "#frequently-asked-questions" },
+      ],
     },
     {
       title: "CONTACT",
-      text1: "Vincom Center, 45A Lý Tự Trọng, Quận 1, TP. Hồ Chí Minh",
-      text2: "(84 28) 3827 0977 | 0901 822 531 (Ms Nhi)",
-      text3: "hyogo.recruitment@pasonatech.vn",
-      text4: "Privacy Policy",
+      links: [
+        { text: "Vincom Center, 45A Lý Tự Trọng, Quận 1, TP. Hồ Chí Minh" },
+        { text: "(84 28) 3827 0977 | 0901 822 531 (Ms Nhi)" },
+        { text: "hyogo.recruitment@pasonatech.vn" },
+        { text: "Privacy Policy", url: "https://pasona.vn/privacy-policy" },
+      ],
     },
   ];
+
   return (
     <section className="container mx-auto pb-6 ">
       <div className=" border border-[#dedede] md:mb-5 2xl:mb-10"></div>
@@ -39,7 +46,7 @@ const Footer = () => {
           <img
             src="/images/header/logohyogo.png"
             alt="logo"
-            className="border border-red-50 max-w-[184px] max-h-[52px] lg:min-w-[341px] lg:min-h-[100px]"
+            className="border border-red-50 max-w-[184px] max-h-[52px] md:max-w-[200px] md:max-h-[58px] xl:min-w-[341px] xl:min-h-[100px]"
           />
           <div className="flex flex-row gap-3">
             <img
@@ -70,16 +77,7 @@ const Footer = () => {
         </div>
 
         {FooterContent.map((item, index) => (
-          <FooterCol
-            key={index}
-            title={item.title}
-            text1={item.text1}
-            text2={item.text2}
-            text3={item.text3}
-            text4={item.text4}
-            text5={item.text5}
-            text6={item.text6}
-          />
+          <FooterCol key={index} title={item.title} links={item.links} />
         ))}
       </div>
       <div className="lg:hidden border border-[#dedede] mt-10 mx-4 "></div>

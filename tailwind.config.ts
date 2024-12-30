@@ -12,11 +12,7 @@ const config: Config = {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        sm: "0rem",
-        md: "0rem",
-        lg: "0rem",
-        xl: "0rem",
-        "2xl": "0rem",
+        md: "2rem",
       },
       screens: {
         sm: "640px",
