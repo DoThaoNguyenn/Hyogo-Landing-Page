@@ -31,7 +31,7 @@ const Company = ({
         ></iframe>
       </div>
       <div className={`w-full lg:max-w-[671px]  h-3 ${color}`} />
-      <div className="flex flex-row gap-3 lg:gap-10 my-5 overflow-hidden lg:overflow-visible lg: min-h-[116px] 2xl:max-h-[116px]">
+      <div className="flex flex-row gap-3 lg:gap-10 my-5 overflow-hidden lg:overflow-visible lg:min-h-[116px] 2xl:max-h-[116px]">
         <div className="basis-[32%]">
           <img
             src={logo}
