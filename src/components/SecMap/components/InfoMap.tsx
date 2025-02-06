@@ -18,7 +18,7 @@ const InfoMap = ({ title, icon1, icon2, text1, text2 }: InfoMapProps) => {
       </div>
       <div className="flex flex-row gap-4">
         {icon2 && <img src={icon2} alt="logo" />}
-        <p className="text-black-text text-lg font-semibold leading-loose">
+        <p className="text-black-text text-lg font-normal leading-loose">
           {text2}
         </p>
       </div>

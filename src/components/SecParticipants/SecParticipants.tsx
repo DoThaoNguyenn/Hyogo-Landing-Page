@@ -42,7 +42,7 @@ const SecParticipants = () => {
               <h5 className="text-white text-[28px] font-extrabold whitespace-nowrap uppercase">
                 Đối tượng tham gia
               </h5>
-              <p className="text-white text-base xl:text-lg font-medium">
+              <p className="text-white text-base font-medium">
                 Sinh viên sẽ giao lưu trực tuyến với 11 doanh nghiệp đến từ tỉnh
                 Hyogo.
                 <br />
@@ -69,15 +69,15 @@ const SecParticipants = () => {
           <img
             src="/images/SecParticipants/IMG-sm.png"
             alt="img-sml"
-            className="absolute xl:hidden -top-20 right-0 sm:w-[600px] sm:h-[950px] lg:w-[850px] overflow-x-visible"
+            className="absolute xl:hidden -top-20 right-0 sm:w-[600px] md:h-[750px] lg:w-[850px] overflow-x-visible"
           />
           {/* Image for breakpoint >= 1280px */}
           <img
             src="/images/SecParticipants/IMG.png"
             alt="img"
-            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:-right-60 2xl:right-0"
+            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:-right-0 xl:w-5/6"
           />
-          <div className="w-fit absolute top-0 xl:-top-14 2xl:-top-16 right-7 sm:right-36 lg:right-72 xl:right-10 2xl:right-60">
+          <div className="w-fit absolute top-0 xl:-top-14 2xl:-top-16 right-1/4 xl:right-[0%]">
             <ImgText images={data} />
           </div>
         </div>

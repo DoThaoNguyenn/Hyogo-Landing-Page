@@ -8,6 +8,7 @@ import SecParticipants from "@components/SecParticipants/SecParticipants";
 import SecQuestion from "@components/SecQuestion/SecQuestion";
 import SecReason from "@components/SecReason/SecReason";
 import SecSlider from "@components/SecSlider/SecSlider";
+import SecTimeline from "@components/SecTimeline/SecTimeline";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <SecParticipants />
       <SecReason />
       <SecIndustries />
+      <SecTimeline />
       <SecSlider />
       <section
         className="bg-repeat mt-[-6rem] pt-[5rem]"

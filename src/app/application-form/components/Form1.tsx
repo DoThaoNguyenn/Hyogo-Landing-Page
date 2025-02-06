@@ -88,7 +88,27 @@ const Form1 = () => {
                 >
                   <input
                     type="checkbox"
-                    className="w-5 h-5 border-2 border-gray rounded "
+                    // className="w-5 h-5 border-2 border-gray rounded "
+                    className="
+                      appearance-none
+                      w-5 h-5 
+                      border-2 border-black 
+                      ml-4 mr-3
+                      cursor-pointer 
+                      checked:bg-blue-secondary
+                      checked:border-blue-secondary
+                      relative
+                      before:content-['✓']
+                      before:absolute
+                      before:hidden
+                      checked:before:block
+                      before:top-1/2
+                      before:left-1/2
+                      before:-translate-x-1/2
+                      before:-translate-y-1/2
+                      before:text-white
+                      before:text-xl
+                      "
                     value={type}
                     onChange={(e) => handleParticipationChange(e, type)}
                   />
@@ -97,17 +117,14 @@ const Form1 = () => {
               ))}
             </div>
           </div>
-
-          <SelectField
-            label="Tại sao bạn muốn tham gia sự kiện này?"
-            options={["Chọn câu trả lời phù hợp"]}
-            onChange={handleChange("reason")}
-          />
         </form>
       </div>
+      <p className="ml-8 mt-4 mb-2 text-blue-secondary text-lg font-semibold leading-tight">
+        (*) Là thông tin bắt buộc
+      </p>
       <div className="flex justify-end">
         <button
-          className="mt-[1.625rem] mb-7 md:mb-[4rem] py-3 px-7 bg-blue-secondary text-white text-xl font-semibold leading-tight rounded-[5px] flex items-center justify-center"
+          className="mb-7 md:mb-[4rem] py-3 px-7 bg-blue-secondary text-white text-xl font-semibold leading-tight rounded-[5px] flex items-center justify-center"
           onClick={() => router.push("/application-form-2")}
         >
           Tiếp theo

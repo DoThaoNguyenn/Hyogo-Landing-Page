@@ -82,7 +82,10 @@ export default function Header() {
                   OFFLINE tại
                 </p>
                 <p className="text-blue-secondary text-[15px] xl:text-lg font-bold">
-                  Đang cập nhật
+                  Trường Đại học Bách Khoa
+                </p>
+                <p className="text-blue-secondary text-[15px] xl:text-lg font-bold">
+                  Đại học Quốc gia - TP.HCM
                 </p>
               </div>
             </div>

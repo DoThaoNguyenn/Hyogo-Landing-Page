@@ -129,7 +129,7 @@ const industriesData: Industry[] = [
           "Vị trí tuyển dụng: Phát triển công nghệ, vị trí công việc chung, quản lý sản xuất",
       },
       {
-        video: "https://youtube.com/embed/7RlaAQ2FRtE",
+        video: "https://youtube.com/embed/4UOxQ1gJZ5o",
         logo: "/images/companies/kako.png",
         name: "Kako Technos Co., Ltd.",
         linhvuc: "Sản xuất",

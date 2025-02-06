@@ -36,6 +36,7 @@ const config: Config = {
         gray: "#e2e4e5",
         "blue-secondary": "#029FC8",
         "blue-quaternary": "#B4E3EF",
+        "black": "#34414d"
       },
       backgroundColor: {
         "blue-quaternary": "#b4e3ef",

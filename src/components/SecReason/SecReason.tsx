@@ -60,7 +60,7 @@ const SecReason = () => {
   return (
     <div
       id="benefits-of-participation"
-      className="relative bg-repeat pt-[13rem] xl:pt-[23rem] lg:pb-[14rem]"
+      className="relative bg-repeat pt-[13rem] lg:pb-[14rem] xl:pt-[24rem]"
       style={{ backgroundImage: "url('/images/header/bg-footer.jpeg')" }}
     >
       <div className="text-center text-[#029fc8]/10 text-[48px] md:text-[100px] xl:text-[150px] font-normal font-geomanist leading-none tracking-tighter">
@@ -130,7 +130,7 @@ const SecReason = () => {
         <img
           src="/images/SecReason/person.png"
           alt="img"
-          className="w-full max-w-[800px] mx-auto lg:absolute lg:bottom-[-28%] lg:left-[50%] lg:transform lg:-translate-x-1/2"
+          className="w-full max-w-[800px] mx-auto xl:absolute lg:bottom-[-28%] lg:left-[50%] lg:transform lg:-translate-x-1/2"
         />
       </div>
     </div>

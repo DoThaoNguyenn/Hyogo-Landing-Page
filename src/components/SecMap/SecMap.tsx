@@ -13,8 +13,8 @@ const SecMap = () => {
     },
     {
       title: "Địa điểm",
-      text1: "Đang cập nhật",
-      text2: "",
+      text1: "Trường Đại học Bách Khoa Đại học Quốc gia - TP. Hồ Chí Minh",
+      text2: "Địa chỉ: 268 Lý Thường Kiệt, Phường 14,Quận 10, TP. Hồ Chí Minh",
     },
   ];
   return (
@@ -35,9 +35,9 @@ const SecMap = () => {
                 />
               ))}
             </div>
-            <div className="text-black-text text-lg font-normal sm:leading-loose mt-2 sm:mt-4">
+            {/* <div className="text-black-text text-lg font-normal sm:leading-loose mt-2 sm:mt-4">
               Địa chỉ: Đang cập nhật
-            </div>
+            </div> */}
           </div>
           <div className="basis-[50%]">
             <iframe
