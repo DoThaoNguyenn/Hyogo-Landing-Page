@@ -8,11 +8,13 @@ const SCHOOLS = [
   "Trường Đại học Bách Khoa - ĐHQG TP.HCM",
   "Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM",
 ];
+const GENDER = ["Nam", "Nữ"];
 const YEARS = ["Năm 3", "Năm 4"];
 const Form1 = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
+    gender: "",
     phone: "",
     email: "",
     school: "Trường Đại học Bách Khoa - ĐHQG TP.HCM",
@@ -42,12 +44,18 @@ const Form1 = () => {
   };
   return (
     <div className=" mx-auto w-full lg:w-auto">
-      <div className="p-8 mt-5 md:mt-10 bg-white rounded-lg shadow">
+      <div className="p-6 sm:p-8 mt-5 md:mt-10 bg-white rounded-lg shadow">
         <form onSubmit={handleSubmit} className="space-y-6">
           <TextField
             label="Họ và Tên*"
             placeholder="Nguyễn Văn A"
             onChange={handleChange("name")}
+          />
+
+          <SelectField
+            label="Giới tính*"
+            options={GENDER}
+            onChange={handleChange("gender")}
           />
 
           <TextField

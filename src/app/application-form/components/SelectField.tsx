@@ -12,7 +12,7 @@ export const SelectField = ({ label, options, onChange }: SelectFieldProps) => {
         {label}
       </label>
       <select
-        className="w-full py-2 px-4 border border-black rounded-[5px] focus:outline-none text-lg font-normal text-gray-placeholder"
+        className="w-full py-2 px-4 border border-black rounded-[5px] focus:outline-none text-lg font-normal text-gray-placeholder appearance-none bg-[url('/images/icons/dropdownIcon.png')] bg-no-repeat bg-[center_right_8px]"
         onChange={onChange}
       >
         {options.map((option, index) => (

@@ -29,10 +29,10 @@ const SecParticipants = () => {
         {/* UPPER PART */}
         <div className="upper w-full flex flex-row justify-start">
           {/* color space */}
-          <div className="relative bg-[#029fc8] w-full max-w-[1701px] xl:h-[450px] pt-[3.25rem] xl:pt-5 pb-32 xl:pb-7 px-4 xl:px-32 flex flex-row items-start">
+          <div className="relative bg-[#029fc8] w-full max-w-[1701px] xl:h-[450px] pt-[3.25rem] xl:pt-5 pb-32 xl:pb-7 pl-4 lg:pl-32 pr-20 min-[1536px]:pl-[8rem] flex flex-row items-start">
             {/* vertical text */}
             <div className="hidden xl:flex h-full flex-col">
-              <p className="-rotate-90 translate-y-80 text-left text-[38px] font-extrabold text-stroke-a uppercase whitespace-nowrap w-32 font-georgia">
+              <p className="-rotate-90 translate-y-80 text-left text-[38px] font-extrabold text-stroke-a uppercase whitespace-nowrap w-32 font-geomanist">
                 đối tượng tham gia
               </p>
               <div className="bg-[#0b6386]/50 h-[60%] translate-y-[55%]"></div>
@@ -42,7 +42,7 @@ const SecParticipants = () => {
               <h5 className="text-white text-[28px] font-extrabold whitespace-nowrap uppercase">
                 Đối tượng tham gia
               </h5>
-              <p className="text-white text-base font-medium">
+              <p className="text-white text-base md:text-lg font-medium">
                 Sinh viên sẽ giao lưu trực tuyến với 11 doanh nghiệp đến từ tỉnh
                 Hyogo.
                 <br />
@@ -61,7 +61,6 @@ const SecParticipants = () => {
           {/* white space */}
           <div className="max-w-[33px] 2xl:max-w-[219px] w-full bg-white"></div>
         </div>
-
         {/* LOWER PART */}
         <div className="lower w-full relative overflow-visible">
           <div className="w-full h-[785px] bg-[#0b6386] xl:hidden"></div>
@@ -69,15 +68,15 @@ const SecParticipants = () => {
           <img
             src="/images/SecParticipants/IMG-sm.png"
             alt="img-sml"
-            className="absolute xl:hidden -top-20 right-0 sm:w-[600px] md:h-[750px] lg:w-[850px] overflow-x-visible"
+            className="absolute xl:hidden -top-20 sm:right-[13%] right-[0%] sm:w-[600px] md:h-[750px] lg:w-[850px] overflow-x-visible"
           />
           {/* Image for breakpoint >= 1280px */}
           <img
             src="/images/SecParticipants/IMG.png"
             alt="img"
-            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:-right-0 xl:w-5/6"
+            className="absolute hidden xl:block xl:-top-[270px] 2xl:-top-80 xl:-right-0 xl:w-5/6 2xl:w-[87%]"
           />
-          <div className="w-fit absolute top-0 xl:-top-14 2xl:-top-16 right-1/4 xl:right-[0%]">
+          <div className="w-fit absolute top-0 xl:-top-14 2xl:-top-16 right-[5%] sm:right-[35%] xl:right-[3%] min-[1400px]:right-[10%] 2xl:right-[3%] min-[1700px]:right-[10%]">
             <ImgText images={data} />
           </div>
         </div>

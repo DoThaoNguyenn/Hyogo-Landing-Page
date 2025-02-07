@@ -2,20 +2,6 @@
 import React, { useState } from "react";
 import { CheckboxGroup } from "./CheckboxGroup";
 import { useRouter } from "next/navigation";
-import CheckBoxGroup from "./CheckBox";
-const COMPANIES = [
-  { name: "Aspark Co., Ltd", type: "(Sản xuất)" },
-  { name: "CBS Group", type: "(Xây dựng)" },
-  { name: "Fuji Data System Inc.", type: "(Công nghệ thông tin)" },
-  { name: "FUJI SPRINGS CO.,INC.", type: "(Sản xuất)" },
-  { name: "HYOGO MACHINERY CO.,LTD", type: "(Sản xuất)" },
-  { name: "ITOH DENKI", type: "(Sản xuất)" },
-  { name: "Kako Technos Co., Ltd", type: "(Sản xuất)" },
-  { name: "Okada Shell Co., Ltd.", type: "(Sản xuất)" },
-  { name: "Pasona Inc.", type: "(Nhân sự)" },
-  { name: "Petabit Corporation", type: "(Công nghệ thông tin)" },
-  { name: "Sankyu Inc.", type: "(Xây dựng)" },
-];
 const REASONS = [
   { name: "Tôi quan tâm đến thị trường việc làm, công việc tại Nhật  Bản." },
   { name: "Tôi quan tâm đến việc làm tại Tỉnh Hyogo, Nhật Bản." },
@@ -63,60 +49,68 @@ const Page = () => {
     };
 
   return (
-    <div className="mx-auto flex flex-col max-w-[770px] ">
-      <div className="p-8 mt-[4.5rem] bg-white rounded-lg shadow flex flex-col gap-8 w-full lg:w-fit">
-        <div className="flex flex-col">
-          <div className="flex flex-col">
-            <CheckBoxGroup options={["Room A"]} />
-            <ul className="list-disc pl-8 space-y-2">
-              {RoomA.map((company) => (
-                <li
-                  key={company.value}
-                  className="text-base text-black-text ml-8"
-                >
-                  {company.value}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <CheckBoxGroup options={["Room B"]} />
-          <ul className="list-disc pl-8 space-y-2">
+    <div className="mx-auto w-full lg:w-auto ">
+      <div className="p-6 sm:p-8 mt-5 md:mt-10 bg-white rounded-lg shadow">
+        <form className="space-y-6">
+          <CheckboxGroup
+            options={[{ name: "Room A", type: "" }]}
+            title={"Chọn phòng doanh nghiệp bạn muốn tham gia*"}
+            onChange={handleCompanySelection(false)}
+          />
+          <ul className=" pl-8 space-y-2">
+            {RoomA.map((company) => (
+              <li
+                key={company.value}
+                className="text-base text-black-text ml-8"
+              >
+                - {company.value}
+              </li>
+            ))}
+          </ul>
+
+          <CheckboxGroup
+            options={[{ name: "Room B", type: "" }]}
+            title={""}
+            onChange={handleCompanySelection(false)}
+          />
+          <ul className=" pl-8 space-y-2">
             {RoomB.map((company) => (
               <li
                 key={company.value}
                 className="text-base text-black-text ml-8"
               >
-                {company.value}
+                - {company.value}
               </li>
             ))}
           </ul>
           <div className="h-[0px] border border-[#e2e4e5] mt-3"></div>
-        </div>
-        <CheckboxGroup
-          title="Tại sao bạn muốn tham gia sự kiện này? *"
-          options={REASONS}
-          onChange={handleCompanySelection(false)}
-        />
-        <div className="flex w-full justify-center">
-          <textarea
-            className="w-[85%] h-[100px] border border-[#989898] rounded-lg p-2 placeholder:text-[#989898] placeholder:text-base placeholder:font-normal placeholder:leading-normal resize-none hover:border-blue-secondary focus:border-blue-secondary focus:outline-none"
-            placeholder="Vui lòng nhập câu trả lời của bạn"
-          ></textarea>
-        </div>
+
+          <CheckboxGroup
+            title="Tại sao bạn muốn tham gia sự kiện này? *"
+            options={REASONS}
+            onChange={handleCompanySelection(false)}
+          />
+          <div className="flex w-full justify-center">
+            <textarea
+              className="w-[85%] h-[100px] border border-[#989898] rounded-lg p-2 placeholder:text-[#989898] placeholder:text-base placeholder:font-normal placeholder:leading-normal resize-none hover:border-blue-secondary focus:border-blue-secondary focus:outline-none"
+              placeholder="Vui lòng nhập câu trả lời của bạn"
+            ></textarea>
+          </div>
+        </form>
       </div>
       <p className="ml-8 mt-4 mb-2 text-blue-secondary text-lg font-semibold leading-tight">
         (*) Là thông tin bắt buộc
       </p>
-      <div className="flex flex-col mx-20">
+      <div className="flex flex-col mx-0 sm:mx-20">
         <div className="flex flex-row justify-between items-center mt-8">
           <input
             type="checkbox"
             className="
           appearance-none
-          w-7 h-5 
-          border-2 border-black 
+          min-w-5 min-h-5
+          border-2 border-black
           ml-4 mr-3
-          cursor-pointer 
+          cursor-pointer
           checked:bg-blue-secondary
           checked:border-blue-secondary
           relative

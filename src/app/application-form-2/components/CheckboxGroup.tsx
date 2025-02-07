@@ -22,7 +22,7 @@ export const CheckboxGroup = ({
           >
             <input
               type="checkbox"
-              className="w-[20px] h-[20px] border-2 border-black ml-4 mr-3 appearance-none cursor-pointer 
+              className="min-w-[20px] min-h-[20px] border-2 border-black ml-4 mr-3 appearance-none cursor-pointer 
               checked:bg-blue-secondary
               checked:border-blue-secondary
               relative

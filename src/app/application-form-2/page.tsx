@@ -11,7 +11,9 @@ const page = () => {
       style={{ backgroundImage: "url('/images/header/bg-footer.jpeg')" }}
     >
       <HeaderForm />
-      <Form2 />
+      <div className="container mx-auto flex flex-col justify-center items-center mt-9">
+        <Form2 />
+      </div>
       <Footer />
     </div>
   );

@@ -103,7 +103,7 @@ const SecReason = () => {
           </div>
         </div>
 
-        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-y-8 xl:gap-y-12 gap-x-14 xl:gap-x-[25.93rem] mt-[1.6875rem] ">
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-y-4 xl:gap-y-12 gap-x-[13.5rem] xl:gap-x-[25.93rem] mt-[1.6875rem] ">
           {reasons.map((reason, index) => (
             <ReasonItem
               key={index}
@@ -130,7 +130,7 @@ const SecReason = () => {
         <img
           src="/images/SecReason/person.png"
           alt="img"
-          className="w-full max-w-[800px] mx-auto xl:absolute lg:bottom-[-28%] lg:left-[50%] lg:transform lg:-translate-x-1/2"
+          className="w-full max-w-[800px] mx-auto lg:absolute lg:bottom-[-28%] lg:left-[50%] lg:transform lg:-translate-x-1/2"
         />
       </div>
     </div>

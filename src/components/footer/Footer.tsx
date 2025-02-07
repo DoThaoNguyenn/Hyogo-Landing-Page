@@ -19,12 +19,12 @@ const Footer = () => {
     {
       title: "MENU",
       links: [
-        { text: "Giới thiệu chương trình", url: "#program-introduction" },
-        { text: "Đôi tượng tham gia", url: "#target-participants" },
-        { text: "Lợi ích tham gia", url: "#benefits-of-participation" },
-        { text: "Danh sách công ty", url: "#list-of-companies" },
-        { text: "Cuộc sống tại Hyogo", url: "#life-in-hyogo" },
-        { text: "Câu hỏi thường gặp", url: "#frequently-asked-questions" },
+        { text: "Giới thiệu chương trình", url: "/#program-introduction" },
+        { text: "Đôi tượng tham gia", url: "/#target-participants" },
+        { text: "Lợi ích tham gia", url: "/#benefits-of-participation" },
+        { text: "Danh sách công ty", url: "/#list-of-companies" },
+        { text: "Cuộc sống tại Hyogo", url: "/#life-in-hyogo" },
+        { text: "Câu hỏi thường gặp", url: "/#frequently-asked-questions" },
       ],
     },
     {

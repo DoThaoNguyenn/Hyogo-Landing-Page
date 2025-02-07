@@ -36,7 +36,7 @@ const page = () => {
           đến ngày sự kiện.
         </p>
         <button
-          className="bg-blue-secondary text-white text-xl sm:text-[22px] font-semibold sm:font-bold font-din px-[3.43rem] py-5 rounded-[5px] mt-8 "
+          className="bg-blue-secondary text-white text-xl sm:text-[22px] font-semibold sm:font-bold px-[3.43rem] py-3 sm:py-5 rounded-[5px] mt-8 "
           onClick={() => router.push("/")}
         >
           Trở về trang chủ
