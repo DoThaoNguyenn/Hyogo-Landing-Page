@@ -1,28 +1,26 @@
 import React from "react";
 
-type CheckboxGroupProps = {
+type CheckBoxProps = {
   title: string;
-  options: any[];
+  value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>, option: any) => void;
+  checked?: boolean;
 };
 
-export const CheckboxGroup = ({
+export const CheckBox = ({
   title,
-  options,
+  value,
   onChange,
-}: CheckboxGroupProps) => {
+  checked,
+}: CheckBoxProps) => {
   return (
     <div className="space-y-4">
       <h3 className="font-semibold text-xl text-blue-secondary">{title}</h3>
       <div className="space-y-3">
-        {options.map((option, index) => (
-          <label
-            key={index}
-            className="flex items-center text-lg font-normal text-black-text"
-          >
-            <input
-              type="checkbox"
-              className="min-w-[20px] min-h-[20px] border-2 border-black ml-4 mr-3 appearance-none cursor-pointer 
+        <label className="flex items-center text-lg font-normal text-black-text">
+          <input
+            type="checkbox"
+            className="min-w-[20px] min-h-[20px] border-2 border-black ml-4 mr-3 appearance-none cursor-pointer 
               checked:bg-blue-secondary
               checked:border-blue-secondary
               relative
@@ -37,14 +35,12 @@ export const CheckboxGroup = ({
               before:text-white
               before:text-xl
               "
-              value={option.value || option.name}
-              onChange={(e) => onChange(e, option)}
-            />
-            <span>
-              {option.name} {option.type}
-            </span>
-          </label>
-        ))}
+            value={value}
+            onChange={(e) => onChange(e, value)}
+            checked={checked}
+          />
+          <span>{value}</span>
+        </label>
       </div>
     </div>
   );

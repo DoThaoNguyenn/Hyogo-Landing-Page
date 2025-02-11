@@ -5,11 +5,21 @@ import { SelectField } from "./SelectField";
 import { useRouter } from "next/navigation";
 
 const SCHOOLS = [
-  "Trường Đại học Bách Khoa - ĐHQG TP.HCM",
-  "Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM",
+  "Trường Đại học Bách khoa – Đại học Quốc gia Thành phố HCM",
+  "Trường Đại học Công nghiệp TP.HCM",
+  "Trường Đại học Công nghệ Thông tin (ĐHQG TP.HCM)",
+  "Trường Đại học Công Thương TP.HCM",
+  "Trường Đại học Giao thông Vận tải TP.HCM",
+  "Trường Đại học Kiến trúc TP.HCM",
+  "Trường Đại học Kinh tế - Tài chính TP. Hồ Chí Minh",
+  "Trường Đại học Khoa học Tự nhiên (ĐHQG TP.HCM)",
+  "Trường Đại học Quốc tế Hồng Bàng",
+  "Trường Đại học Sài Gòn",
+  "Trường Đại học Sư Phạm Kỹ Thuật TP.HCM",
+  "Trường Đại học Tôn Đức Thắng",
 ];
 const GENDER = ["Nam", "Nữ"];
-const YEARS = ["Năm 3", "Năm 4"];
+const YEARS = ["Năm 1", "Năm 2", "Năm 3", "Năm 4", "Đã tốt nghiệp"];
 const Form1 = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
